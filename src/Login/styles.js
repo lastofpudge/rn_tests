@@ -21,7 +21,7 @@ export default StyleSheet.create({
       left: 0,
       right: 0,
       top: 0,
-      bottom: '5%',
+      bottom: '7%',
       borderBottomRightRadius: 25,
     },
     logo_cover: {
@@ -39,6 +39,7 @@ export default StyleSheet.create({
     },
     title: {
       maxWidth: 195,
+      marginBottom: 72,
       position: 'relative',
       zIndex: 2,
       color: '#fff',
