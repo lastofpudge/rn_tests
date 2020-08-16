@@ -1,8 +1,15 @@
 {
   "expo": {
-    "name": "doflex2020",
-    "slug": "doflex2020",
-    "version": "1.0.0",
+    "name": "app2020",
+    "slug": "app2020",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#00000088"
+    },
+    "androidNavigationBar": {
+      "visible": "immersive" 
+    },
+    "version": "0.5.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -21,6 +28,22 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
     }
   }
 }
