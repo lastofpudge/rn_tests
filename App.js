@@ -2,6 +2,7 @@ import { Roboto_400Regular, Roboto_500Medium, useFonts } from '@expo-google-font
 
 import { AppLoading } from 'expo';
 import HomeScreen from "./src/Home";
+import ItemScreen from './src/Item';
 import LoginScreen from './src/Login';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
@@ -12,16 +13,16 @@ const Stack = createStackNavigator();
 const transitionConfig = () => {
   return {
     transitionSpec: {
-      duration: 750,
-      easing: Easing.out(Easing.poly(4)),
+      duration: 240,
+      easing: Easing.out(Easing.poly(2)),
       timing: Animated.timing,
       useNativeDriver: true,
     },
     screenInterpolator: sceneProps => {      
-      const { layout, position, scene } = sceneProps
+      const { layout, position, scene } = sceneProps;
 
-      const thisSceneIndex = scene.index
-      const width = layout.initWidth
+      const thisSceneIndex = scene.index;
+      const width = layout.initWidth;
 
       const translateX = position.interpolate({
         inputRange: [thisSceneIndex - 1, thisSceneIndex],
@@ -54,6 +55,7 @@ export default function App() {
       >
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Item" component={ItemScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
